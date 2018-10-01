@@ -1,5 +1,5 @@
 """
-  Capstone Project.  Code written by Ao Liu.
+  Capstone Project.  Code written by Ao_Liu.
   Fall term, 2018-2019.
 """
 
