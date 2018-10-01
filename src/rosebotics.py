@@ -81,3 +81,7 @@ class Wheel(object):
 
     def reset_degrees_spun(self, position=0):
         self.motor.position = position
+
+    def stop(self, stop_action = StopAction.BRAKE.value):
+        self.left_wheel.stop_spinning(stop_action)
+        self.right_wheel.stop_spinning(stop_action)
