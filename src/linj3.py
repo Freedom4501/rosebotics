@@ -15,6 +15,7 @@ def main():
 def run_tests():
     """ Runs various tests. """
     run_test_go_stop()
+    run_test_spinning()
 
 
 def run_test_go_stop():
@@ -37,6 +38,19 @@ def run_test_go_stop():
 
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
+
+def run_test_spinning():
+    robot = rb.Snatch3rRobot()
+    robot.spinning(100,-100)
+    robot.left_wheel.motor.duty_cycle
+
+def spinning(robot,time_right,time_left):
+    robot.right_wheel.start_spinning(time_right)
+    robot.left_wheel.start_spinning(time_left)
+    robot.right_wheel.stop_spinning(rb.StopAction.BRAKE.value)
+    robot.left_wheel.stop_spinning(rb.StopAction.BRAKE.value)
+
+
 
 
 main()
