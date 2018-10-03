@@ -9,8 +9,8 @@ import time
 
 def main():
     """ Runs tests. """
-    run_tests()
-    turning(90,5)
+    #run_tests()
+    turning(1,5)
 
 
 def run_tests():
@@ -42,7 +42,7 @@ def run_test_go_stop():
 def turning(x, N):
     robot = rb.Snatch3rRobot()
     robot.left_wheel.start_spinning(x)
-    robot.right_wheel.start_spinning(0)
+    robot.right_wheel.start_spinning(-x)
     time.sleep(N)
     robot.stop(rb.StopAction.COAST.value)
 
