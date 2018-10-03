@@ -39,4 +39,13 @@ def run_test_go_stop():
     print(robot.left_wheel.get_degrees_spun())
 
 
+def go_forward(left_wheel_duty_cycle_percent, right_wheel_duty_cycle_percent):
+    robot = rb.Snatch3rRobot()
+    dl = left_wheel_duty_cycle_percent
+    d2 = right_wheel_duty_cycle_percent
+    robot.go(dl, d2)
+
+
+
+
 main()
