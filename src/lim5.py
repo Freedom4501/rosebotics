@@ -10,6 +10,7 @@ import time
 def main():
     """ Runs tests. """
     run_tests()
+    turning(5,5)
 
 
 def run_tests():
@@ -37,6 +38,13 @@ def run_test_go_stop():
 
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
+
+def turning(x, N):
+    robot = rb.Snatch3rRobot()
+
+    robot.left_wheel.start_spinning(x)
+    time.sleep(N)
+    robot.stop(rb.StopAction.COAST.value)
 
 
 main()
