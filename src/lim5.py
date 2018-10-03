@@ -39,11 +39,10 @@ def run_test_go_stop():
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
 
-
 def turning(x, N):
     robot = rb.Snatch3rRobot()
     robot.left_wheel.start_spinning(x)
-    robot.right_wheel.default_stop_action()
+    robot.right_wheel.start_spinning(0)
     time.sleep(N)
     robot.stop(rb.StopAction.COAST.value)
 
