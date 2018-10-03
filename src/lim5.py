@@ -10,7 +10,7 @@ import time
 def main():
     """ Runs tests. """
     #run_tests()
-    turning(1,5)
+    turning(1, 5)
 
 
 def run_tests():
